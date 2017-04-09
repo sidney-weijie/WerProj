@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.sidney.domain.User;
 import com.sidney.service.UserService;
 
@@ -22,6 +23,7 @@ public class LoginController {
 	public String loginPage(){
 		return "login";
 	}
+
 	
 	@RequestMapping(value = "/loginCheck.html")
 	public ModelAndView loginCheck(HttpServletRequest request, LoginCommand cmd){
@@ -36,6 +38,18 @@ public class LoginController {
 			request.getSession().setAttribute("user", user);
 			return new ModelAndView("main");
 		}
+		
+	}
+	
+	@RequestMapping(value = "/getRedisScript.html")
+	public ModelAndView getRedisScript(HttpServletRequest request){
+	
+		String script = (String) request.getAttribute("script");
+		
+		JSONObject jobj = new JSONObject();
+		
+		return null;
+		
 		
 	}
 	

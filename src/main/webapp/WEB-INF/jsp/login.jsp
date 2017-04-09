@@ -143,6 +143,15 @@ function myThrowFun() {
 		Email: <input type="text" name="email" size="30"> 
 		<input type="submit" value="Submit">
 	</form>
+	
+	<script>
+		function fun1();
+	</script>
+	<form id="inputForm"  wrap="hard">
+		<textarea rows="50" cols="120" ></textarea>
+		RedisKey<input type="text" name="fname" />
+		 <input type="submit" value="Submit" />
+	</form>
 </body>
 
 
